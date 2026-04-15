@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+
+    --background: 222 30% 7%;
+    --foreground: 210 20% 95%;
+    --card: 220 18% 11%;
+    --card-foreground: 210 20% 95%;
+    --popover: 220 18% 11%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 150 80% 50%;
+    --primary-foreground: 220 18% 7%;
+    --secondary: 220 17% 15%;
+    --secondary-foreground: 210 20% 90%;
+    --muted: 220 15% 13%;
+    --muted-foreground: 215 15% 60%;
+    --accent: 188 82% 55%;
+    --accent-foreground: 220 18% 7%;
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 19%;
+    --input: 220 15% 19%;
+    --ring: 150 80% 50%;
+    --chart-1: 150 80% 50%;
+    --chart-2: 188 82% 55%;
+    --chart-3: 200 80% 55%;
+    --chart-4: 40 90% 55%;
+    --chart-5: 0 72% 55%;
+    --radius: 0.75rem;
+    --sidebar-background: 220 18% 8%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 150 80% 50%;
+    --sidebar-primary-foreground: 220 18% 7%;
+    --sidebar-accent: 220 15% 14%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 150 80% 50%;
+  }
+
+  .dark {
+    --background: 222 30% 7%;
+    --foreground: 210 20% 95%;
+    --card: 220 18% 11%;
+    --card-foreground: 210 20% 95%;
+    --popover: 220 18% 11%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 150 80% 50%;
+    --primary-foreground: 220 18% 7%;
+    --secondary: 220 17% 15%;
+    --secondary-foreground: 210 20% 90%;
+    --muted: 220 15% 13%;
+    --muted-foreground: 215 15% 60%;
+    --accent: 188 82% 55%;
+    --accent-foreground: 220 18% 7%;
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 19%;
+    --input: 220 15% 19%;
+    --ring: 150 80% 50%;
+    --chart-1: 150 80% 50%;
+    --chart-2: 188 82% 55%;
+    --chart-3: 200 80% 55%;
+    --chart-4: 40 90% 55%;
+    --chart-5: 0 72% 55%;
+    --sidebar-background: 220 18% 8%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 150 80% 50%;
+    --sidebar-primary-foreground: 220 18% 7%;
+    --sidebar-accent: 220 15% 14%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 150 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at top left, rgba(16, 185, 129, 0.14), transparent 28%),
+      radial-gradient(circle at top right, rgba(34, 211, 238, 0.1), transparent 24%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0));
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: hsla(var(--primary), 0.25);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply border border-border/60 bg-card/80 backdrop-blur-xl;
+  }
+}
